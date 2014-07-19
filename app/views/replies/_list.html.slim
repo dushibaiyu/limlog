@@ -1,0 +1,9 @@
+.replies
+  - @replies.each do |reply|
+    .reply
+      h4.reply-header
+        = link_to_unless reply.url.blank?, reply.author, reply.url do
+           = reply.author
+
+      div.reply-body.markdown-body
+        == reply.markdown_body

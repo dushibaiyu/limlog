@@ -1,0 +1,6 @@
+- if page.current?
+  li class="current"
+    span == page
+- else
+  li
+    == link_to page, url, {:remote => remote, :rel => page.next? ? 'next' : page.prev? ? 'prev' : nil}

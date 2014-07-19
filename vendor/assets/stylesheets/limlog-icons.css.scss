@@ -1,0 +1,107 @@
+@font-face {
+  font-family: 'limlog-icons';
+  src: url(font-path('limlog-icons.eot?23743530'));
+  src: url(font-path('limlog-icons.eot?23743530#iefix')) format('embedded-opentype'),
+       url(font-path('limlog-icons.woff?23743530')) format('woff'),
+       url(font-path('limlog-icons.ttf?23743530')) format('truetype'),
+       url(font-path('limlog-icons.svg?23743530#limlog-icons')) format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+/* Chrome hack: SVG is rendered more smooth in Windozze. 100% magic, uncomment if you need it. */
+/* Note, that will break hinting! In other OS-es font will be not as sharp as it could be */
+/*
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+  @font-face {
+    font-family: 'limlog-icons';
+    src: url(font-path('limlog-icons.svg?23743530#limlog-icons')) format('svg');
+  }
+}
+*/
+ 
+ %icon-base {
+  font-family: "limlog-icons";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+ 
+  display: inline-block;
+  text-decoration: inherit;
+  width: 1em;
+  margin-right: .2em;
+  text-align: center;
+  /* opacity: .8; */
+ 
+  /* For safety - reset parent styles, that can break glyph codes*/
+  font-variant: normal;
+  text-transform: none;
+     
+  /* fix buttons height, for twitter bootstrap */
+  line-height: 1em;
+ 
+  /* Animation center compensation - margins should be symmetric */
+  /* remove if not needed */
+  margin-left: .2em;
+ 
+  /* you can be more comfortable with increased icons size */
+  /* font-size: 120%; */
+ 
+  /* Uncomment for 3D effect */
+  /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
+}
+ 
+%icon-home:before { @extend %icon-base; content: '\e800'; } /* '' */
+%icon-like:before { @extend %icon-base; content: '\e801'; } /* '' */
+%icon-rss:before { @extend %icon-base; content: '\e802'; } /* '' */
+%icon-reply:before { @extend %icon-base; content: '\e803'; } /* '' */
+%icon-cog:before { @extend %icon-base; content: '\e804'; } /* '' */
+%icon-menu:before { @extend %icon-base; content: '\e805'; } /* '' */
+%icon-music:before { @extend %icon-base; content: '\e806'; } /* '' */
+%icon-search:before { @extend %icon-base; content: '\e807'; } /* '' */
+%icon-mail:before { @extend %icon-base; content: '\e808'; } /* '' */
+%icon-user:before { @extend %icon-base; content: '\e809'; } /* '' */
+%icon-tags:before { @extend %icon-base; content: '\e80a'; } /* '' */
+%icon-bookmark:before { @extend %icon-base; content: '\e80b'; } /* '' */
+%icon-password:before { @extend %icon-base; content: '\e80c'; } /* '' */
+%icon-edit:before { @extend %icon-base; content: '\e80d'; } /* '' */
+%icon-date:before { @extend %icon-base; content: '\e80e'; } /* '' */
+%icon-time:before { @extend %icon-base; content: '\e80f'; } /* '' */
+%icon-delete:before { @extend %icon-base; content: '\e810'; } /* '' */
+%icon-category:before { @extend %icon-base; content: '\e811'; } /* '' */
+%icon-github:before { @extend %icon-base; content: '\e812'; } /* '' */
+%icon-weibo:before { @extend %icon-base; content: '\e813'; } /* '' */
+%icon-linuxba:before { @extend %icon-base; content: '\e814'; } /* '' */
+%icon-weechat:before { @extend %icon-base; content: '\e815'; } /* '' */
+%icon-gplus:before { @extend %icon-base; content: '\e816'; } /* '' */
+%icon-plane:before { @extend %icon-base; content: '\e817'; } /* '' */
+%icon-tieba:before { @extend %icon-base; content: '\e818'; } /* '' */
+%icon-youtube:before { @extend %icon-base; content: '\e819'; } /* '' */
+%icon-terminal:before { @extend %icon-base; content: '\e81a'; } /* '' */
+
+.icon-home { @extend %icon-home; }
+.icon-like { @extend %icon-like; }
+.icon-rss { @extend %icon-rss; }
+.icon-reply { @extend %icon-reply; }
+.icon-cog { @extend %icon-cog; }
+.icon-menu { @extend %icon-menu; }
+.icon-music { @extend %icon-music; }
+.icon-search { @extend %icon-search; }
+.icon-mail { @extend %icon-mail; }
+.icon-user { @extend %icon-user; }
+.icon-tags { @extend %icon-tags; }
+.icon-bookmark { @extend %icon-bookmark; }
+.icon-password { @extend %icon-password; }
+.icon-edit { @extend %icon-edit; }
+.icon-date { @extend %icon-date; }
+.icon-time { @extend %icon-time; }
+.icon-delete { @extend %icon-delete; }
+.icon-category { @extend %icon-category; }
+.icon-github { @extend %icon-github; }
+.icon-weibo { @extend %icon-weibo; }
+.icon-linuxba { @extend %icon-linuxba; }
+.icon-weechat { @extend %icon-weechat; }
+.icon-gplus { @extend %icon-gplus; }
+.icon-plane { @extend %icon-plane; }
+.icon-tieba { @extend %icon-tieba; }
+.icon-youtube { @extend %icon-youtube; }
+.icon-terminal { @extend %icon-terminal; }

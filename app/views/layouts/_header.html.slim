@@ -1,0 +1,30 @@
+header#site-header
+  #site-navbar
+    #site-navbar-wrapper.clearfix
+      #site-logo
+        = link_to image_tag(image_url('logo.png')), root_path
+
+      nav#site-nav
+        ul.pages
+          li
+            = link_to 'Home', root_path
+          li.has-submenu
+            a Category
+            ul.submenu
+              - @categories.each do |category|
+                = link_to category.name, category_path(category)
+
+          = render 'pages/list'
+
+        .actions.has-submenu
+          = link_to_unless already_login?, 'Log In', login_path, class: 'login' do
+            a = current_user
+            ul.options.submenu
+              li = link_to 'Account', user_path(current_user)
+              li = link_to 'Log Out', logout_path, method: :delete
+
+  #site-branding
+    h1#site-title
+      = link_to SiteConfig.title, SiteConfig.url
+    h2#site-desc
+      = SiteConfig.desc

@@ -1,0 +1,24 @@
+.info
+  h2.title = link_to SiteConfig.title, SiteConfig.url
+  .desc
+    p Do you want to signup ?
+    p Do you really want to signup ?
+    p
+      == "Already have an account? Just #{link_to 'Log in', login_path}"
+
+.form
+  = form_for :user, html: { autocomplete: :off } do |f|
+    .field
+      i.icon-user
+      = f.text_field     :account,               placeholder: 'Account name'
+    .field
+      i.icon-mail
+      = f.email_field    :email,                 placeholder: 'Your Email'
+    .field
+      i.icon-password
+      = f.password_field :password,              placeholder: 'Password'
+    .field
+      i.icon-password
+      = f.password_field :password_confirmation, placeholder: 'Confirm Password'
+    .action
+      = f.submit         'Sign up'

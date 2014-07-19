@@ -1,0 +1,116 @@
+//= require fonts
+//= require limlog-icons
+
+@import "mixins"
+
+*
+  +box-sizing
+  +selection(#b3d4fc)
+
+img
+  width: 100px
+
+body.sign
+  margin: 0
+  font: 14px/1.9 Roboto, sans-serif
+  color: #fff
+  background: image_url('hero.jpg')
+  background-size: cover
+
+  .wrapper
+    margin: 10% auto 0
+    width: 70%
+
+  .info, .form
+    position: relative
+    width: 50%
+    float: left
+    padding-left: 20px
+    padding-right: 20px
+
+  .info
+    padding: 0 20px
+
+  .title
+    margin: 0 0 20px
+    font-size: 2.8em
+    font-weight: bold
+    text-align: center
+
+    a
+      padding: 8px 12px
+      border: 5px solid #fff
+      text-decoration: none
+      color: #fff
+      +transition(.4s)
+
+      &:hover
+        background: rgba(0, 0, 0, .2)
+
+  .desc
+    margin-top: 40px
+    text-align: center
+    font-weight: 300
+
+    p
+      margin: 10px 0 0
+      font-size: 1.2em
+
+    a
+      color: #fff
+      text-decoration: none
+      border-bottom: 1px dotted
+
+      &:hover
+        color: rgba(255, 255, 255, .7)
+
+  .form form
+    input
+      margin: 0
+      padding: 9px
+      width: 100%
+      outline: none
+      line-height: 1.8
+      border: 1px solid rgba(255, 255, 255, .5)
+      font-size: 1.25em
+      letter-spacing: 1px
+      color: #fff
+      background: rgba(255, 255, 255, .17)
+      +transition(.4s)
+
+      &:focus
+        border-color: rgba(255, 255, 255, .9)
+
+    .field
+      position: relative
+      margin-bottom: 20px
+
+      i
+        position: absolute
+        top: 0
+        bottom: 0
+        left: 0
+        width: 3em
+        height: 3.05em
+        font-size: 1.2em
+        line-height: 3.2em
+        border-right: 1px solid rgba(255, 255, 255, .5)
+        text-align: center
+        color: #fff
+
+      input
+        padding-left: 60px
+
+    .action input
+      margin: 0 calc(50% - 60px)
+      padding: 8px 12px
+      width: 120px
+      outline: none
+      cursor: pointer
+      line-height: 1.4em
+      font-weight: 600
+      text-transform: uppercase
+      color: #fff
+
+      &:hover
+        background: rgba(255, 255, 255, .4)

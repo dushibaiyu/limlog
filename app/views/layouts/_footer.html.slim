@@ -1,0 +1,21 @@
+footer#site-footer
+  #site-links.clearfix
+    ul.links
+      li
+        = link_to '<i class="icon-rss"></i>'.html_safe, rss_path
+      li
+        = link_to '<i class="icon-github"></i>'.html_safe, rss_path
+      li
+        = link_to '<i class="icon-gplus"></i>'.html_safe, rss_path
+      li
+        = link_to '<i class="icon-weibo"></i>'.html_safe, rss_path
+
+    ul.copyright
+      li
+        == "&copy #{Time.now.year} #{link_to SiteConfig.title, SiteConfig.url}"
+      li
+        == "Powered by #{link_to 'Limlog', 'https://github.com/DreamHarbor/limlog.git'}"
+      li
+        == "Based on #{link_to 'Ruby', 'https://www.ruby-lang.org/'} on #{link_to 'Rails', 'http://rubyonrails.org'}"
+      li
+        == link_to 'Sitemap', sitemap_path

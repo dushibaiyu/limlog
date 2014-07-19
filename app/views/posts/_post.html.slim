@@ -1,0 +1,22 @@
+.entry.post
+  h2.entry-title
+    = link_to post.title, post_path(post)
+
+  ul.entry-meta
+    li
+      i.icon-user
+      = link_to post.author, user_path(post.author)
+    li
+      i.icon-category
+      = link_to post.category, category_path(post.category)
+
+    - unless post.tag_list.size.eql? 0
+      li
+        i.icon-tags
+        == post.tag_list.map { |tag| link_to tag, tag_path(tag) }.join(', ')
+    li
+      i.icon-edit
+      = link_to 'Edit', edit_post_path(post)
+
+  div.entry-body.markdown-body
+    == post.markdown_body

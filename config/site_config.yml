@@ -1,0 +1,18 @@
+# Site config
+defaults: &defaults
+  title: Limlog's Blog
+  desc:  Limlog is a simple blog system based on Ruby on Rails
+  url:   http://localhost:3000
+
+  admin:
+    username: limlog
+    password: limlog
+
+development:
+  <<: *defaults
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults

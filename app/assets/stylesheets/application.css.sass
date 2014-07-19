@@ -1,0 +1,285 @@
+//= require fonts
+//= require limlog-icons
+//= require nprogress
+//= require entries
+//= require replies
+//= require pagination
+//= require markdown
+//= require_self
+
+@import "mixins"
+
+.container, .clearfix
+  +clearfix
+
+*
+  +box-sizing
+  +selection(#b3d4fc)
+
+body
+  margin: 0
+  color: #333
+  background: #fafafa
+  font: 14px/1.9 proxima-nova, Helvetica, Arial, sans-serif
+
+a
+  text-decoration: none
+  outline: none
+  cursor: pointer
+  +transition(.25s)
+
+img
+  max-width: 100%
+
+#site-header
+  padding-top: 20px
+  background: image_url('hero.jpg') 0 -150px
+  background-size: cover
+
+  &, a
+    font-family: Roboto, sans-serif
+
+#site-navbar-wrapper
+  margin: 0 auto
+  width: 70%
+
+#site-logo
+  float: left
+  height: 40px
+
+  a
+    display: block
+    line-height: 1
+
+  img
+    padding: 10px 0
+    height: 40px
+
+#site-nav
+  float: right
+
+  .pages
+    display: inline-block
+    margin: 0
+    padding: 0
+    list-style: none
+
+    > li
+      position: relative
+      display: inline-block
+
+      > a
+        display: block
+        padding: 10px 20px
+        line-height: 20px
+        color: rgba(255, 255, 255, .6)
+        +transition(.4s)
+
+        &:hover
+          background: rgba(255, 255, 255, .15)
+          color: rgba(255, 255, 255, .8)
+
+  .actions
+    position: relative
+    display: inline-block
+    margin-left: 20px
+    padding: 10px 0
+    line-height: 20px
+
+    > a
+      padding: 5px 20px
+      line-height: 20px
+      color: rgba(255, 255, 255, .6)
+      +transition(.25s)
+      +border-radius(3px)
+
+      &:hover
+        background: rgba(255, 255, 255, .15)
+        color: rgba(255, 255, 255, .8)
+
+      &.login
+        border: 1px solid rgba(255, 255, 255, .5)
+
+  .submenu
+    position: absolute
+    top: 100%
+    display: none
+    margin: 0
+    padding: 0
+    text-align: center
+    background: rgba(0, 0, 0, .5)
+    z-index: 99
+
+    li
+      display: block
+
+    a, span
+      display: block
+      padding: 10px 40px
+      line-height: 20px
+      color: #fff
+
+    a:hover
+      color: rgba(255, 255, 255, 0.8)
+      background: rgba(0, 0, 0, .4)
+
+  .options
+    width: 130px
+
+#site-navbar.fixed-top
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  background: rgba(255, 255, 255, .9)
+  +box-shadow(0 1px 2px 0 rgba(0, 0, 0, .075))
+
+  &, .pages > li > a, .actions > a
+    color: #7c8081
+
+  .pages li, .actions
+    > a:hover
+      background: rgba(188, 202, 206, .15)
+
+  .submenu
+    background: rgba(255, 255, 255, .8)
+    +box-shadow(0 2px 2px 0 rgba(0, 0, 0, .075))
+
+    a, span
+      color: rgba(0, 0, 0, .4)
+
+    a:hover
+      background: rgba(188, 202, 206, .15)
+
+#site-branding
+  padding: 120px 0
+  text-align: center
+
+  &, a
+    color: #fff
+
+#site-title
+  margin: 0
+  font-size: 4.6em
+  font-weight: 300
+  letter-spacing: -2px
+  +animation(bounceInDown 1s)
+
+  a
+    font-weight: 200
+
+#site-desc
+  margin: 0
+  padding-top: 5px
+  line-height: 1
+  font-weight: 200
+  +animation(fadeInUpDelay 1s 1s both)
+
+#site-content
+  padding: 80px 0
+
+#site-content-wrapper
+  margin: 0 auto
+  width: 60%
+
+//
+// #site-footer
+//
+#site-footer
+  font: 1.1em Roboto, sans-serif
+  font-weight: 300
+
+#site-links
+  color: rgba(185, 186, 187, .8)
+  background: #39454b
+
+  a
+    color: rgba(185, 186, 187, 0.8)
+
+    &:hover
+      color: #fafafa
+      
+  ul
+    margin: 0
+    padding: 0
+    list-style: none
+    line-height: 5em
+
+    li
+      display: inline-block
+      padding: 0 0 0 0.5em
+      margin: 0 0 0 0.5em
+      line-height: 1
+
+    &.links
+      float: left
+      margin-left: 120px
+    
+    &.copyright
+      float: right
+      margin-right: 120px
+
+  ul.links i
+    font-size: 1.3em
+
+  ul.copyright li
+    border-left: 1px solid rgba(145, 146, 147, .25)
+
+    &:first-child
+      border: 0
+
+    a
+      border-bottom: 1px dotted rgba(185, 186, 187, 0.8)
+
+
+//
+// animation keyframes
+//
+@-webkit-keyframes bounceInDown
+  0%
+    +opacity(0)
+    +transform(translateY(-2000px))
+
+  60%
+    +opacity(1)
+    +transform(translateY(30px))
+
+  80%
+    +transform(translateY(-10px))
+
+  100%
+    +transform(translateY(0))
+
+@keyframes bounceInDown
+  0%
+    +opacity(0)
+    +transform(translateY(-2000px))
+
+  60%
+    +opacity(1)
+    +transform(translateY(30px))
+
+  80%
+    +transform(translateY(-10px))
+
+  100%
+    +transform(translateY(0))
+
+@-webkit-keyframes fadeInUpDelay
+  0%
+    +opacity(0)
+    +transform(translateY(20px))
+
+  100%
+    +opacity(1)
+    +transform(translateY(0))
+
+
+@keyframes fadeInUpDelay
+  0%
+    +opacity(0)
+    +transform(translateY(20px))
+
+  100%
+    +opacity(1)
+    +transform(translateY(0))

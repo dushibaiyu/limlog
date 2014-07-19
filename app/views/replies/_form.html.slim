@@ -1,0 +1,14 @@
+= form_for [@post, @post.replies.build] do |f|
+  .field
+    = f.label        :author
+    = f.text_field   :author
+  .field
+    = f.label        :email
+    = f.email_field  :email
+  .field
+    = f.label        :url
+    = f.url_field    :url
+  .field
+    = f.text_area    :body
+  .action.clearfix
+    = f.submit
