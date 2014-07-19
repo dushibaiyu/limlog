@@ -16,5 +16,7 @@ $(document).ready ->
     else
       $('#site-navbar').removeClass('fixed-top')
 
-  $('html, body').on 'hover', '.has-submenu', ->
-    $(this).children('.submenu').fadeToggle()
+  $(document).on 'mouseover, .submenu', '.has-submenu', ->
+    $(this).children('.submenu').fadeIn()
+  $(document).on 'mouseout', '.has-submenu', ->
+    $(this).children('.submenu').fadeOut()

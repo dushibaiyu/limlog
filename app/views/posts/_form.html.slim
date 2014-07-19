@@ -1,10 +1,10 @@
 = form_for @post do |f|
   .field
     = f.label      :title
-    = f.text_field :title
+    = f.text_field :title,             placeholder: 'Post Title'
   .field
     = f.label      :slug
-    = f.text_field :slug
+    = f.text_field :slug,              placeholder: 'Post Slug'
   .field
     = f.label      :category_id
     = select_tag   'post[category_id]', options_for_select(@categories_hash, 1)

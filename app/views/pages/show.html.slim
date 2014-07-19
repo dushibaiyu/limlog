@@ -1,5 +1,12 @@
 .entry.page
   h2.entry-title
     span = @page.title
+  ul.entry-meta
+    li
+      i.icon-edit
+      = link_to 'Edit', edit_page_path(@page)
+    li
+      i.icon-delete
+      = link_to 'Delete', page_path(@page), data: { method: 'delete', confirm: 'Sure to delete this page?' }
   div.entry-body.markdown-body
     == @page.markdown_body

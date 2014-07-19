@@ -1,4 +1,6 @@
 class PagesController < ApplicationController
+  before_filter :require_login, only: [:new, :create, :edit, :update, :destroy]
+
   before_action :find_page,    only: [:show, :edit, :update, :destroy]
   before_action :prepare_feed, only: [:sitemap, :rss]
 

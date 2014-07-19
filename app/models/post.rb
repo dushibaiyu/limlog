@@ -27,7 +27,7 @@ class Post < ActiveRecord::Base
     user = value
   end
 
-  def splitted_markdown_body
+  def partial_markdown_body
     markdown_body.split('<!--more-->').first
   end
 

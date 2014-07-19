@@ -1,4 +1,6 @@
 class RepliesController < ApplicationController
+  before_filter :require_login, only: [:edit, :update, :destroy]
+
   before_action :find_post
 
   def index

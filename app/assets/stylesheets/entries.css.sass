@@ -7,6 +7,13 @@
   margin: 0 0 10px
   line-height: 1
 
+.entry-title
+  a
+    color: #333
+
+    &:hover
+      color: #111
+
 .entry-meta
   padding: 0
   list-style: none
@@ -18,7 +25,43 @@
   i
     margin-right: 3px
 
+  i, a
+    color: rgba(33, 33, 33, .7)
+
+    &:hover
+      color: rgba(0, 0, 0, .9)
+      text-decoration: underline
+
 .entry-body
   p
     font-size: 1.15em
     margin-bottom: 20px
+
+  a
+    border-bottom: 1px dotted
+    color: rgba(33, 33, 33, .8)
+
+
+.entry-form form
+  input, textarea, select
+    outline: none
+
+  .field
+    margin-bottom: 10px
+
+    input, textarea
+      padding: 6px 10px
+      width: 100%
+      line-height: 1.4em
+      border: 1px solid rgba(0, 0, 0, .1)
+
+      &:focus
+        border-color: rgba(0, 0, 0, .3)
+
+    input
+      font-size: 1.1em
+
+    textarea
+      min-height: 500px
+      resize: vertical
+      font-size: 1.05em

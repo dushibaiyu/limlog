@@ -4,7 +4,8 @@
 Post.create(
   title: 'Limlog Demo Post',
   slug: 'limlog2-demo-post',
-  body: <<-markdown,
+  category_id: 1,
+  body: <<-markdown
 Head1
 ===
 
@@ -13,7 +14,6 @@ Head2
 
 ### head3
 markdown
-  category_id: 1
 )
 
 Category.create(

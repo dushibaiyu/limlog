@@ -3,9 +3,13 @@ source 'http://ruby.taobao.org'
 
 gem 'rails', '4.1.4'
 
-gem 'sqlite3'
+group :development, :test do
+  gem 'sqlite3'
+end
 
-# gem 'mysql2'
+group :production do
+  gem 'pg'
+end
 
 gem 'sass-rails'
 gem 'uglifier'
@@ -25,21 +29,15 @@ group :development, :test do
 end
 
 gem 'pry-rails'
-
 gem 'slim-rails'
-
 gem 'nprogress-rails'
 
 gem 'puma'
 
 gem 'kaminari'
-
-# markdown and syntax highlight
 gem 'redcarpet'
 gem 'pygments.rb'
 
 gem 'settingslogic'
-
 gem 'acts-as-taggable-on'
-
 gem 'fontello_rails_converter'

@@ -18,5 +18,6 @@ Rails.application.routes.draw do
   resources :categories, path: 'category'
   resources :pages,      path: '', except: [:index]
 
+  resources :pages, only: [:show, :edit, :update, :destroy]
   resources :users, only: [:show, :edit, :update, :destroy]
 end
